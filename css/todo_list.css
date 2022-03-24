@@ -55,6 +55,19 @@ body {
   background-color: #ffffff;
 }
 
+.todo-list li:hover {
+  background-color: #550000 !important;
+  color: #fff !important;
+  }
+.todo-list li:hover::before {
+	color: #550000 !important;
+	}
+	.todo-list li::before:hover {
+		background-color: #fff !important;
+		color: #550000 !important;
+		border: 0px;
+		}
+
 .todo-form {
   padding: 0 16px;
   display: flex;
@@ -142,5 +155,19 @@ body {
 }
 
 .todo-add:active {
+  opacity: 0.5;
+}
+
+.todo-clear {
+  padding: 12px 22px;
+  color: #ffffff;
+  background-color: #750000;
+}
+
+.todo-clear:hover {
+  background-color: #550000;
+}
+
+.todo-clear:active {
   opacity: 0.5;
 }

@@ -6,11 +6,11 @@ let form = document.querySelector('.todo-form');
 let priority = document.querySelector('.todo-priority');
 
 // Вывод данных из localStorage
-if (localStorage.getItem('todo') !==undefined) {
+if (localStorage.getItem('todo') !== undefined) {
 todoList1 = JSON.parse(localStorage.getItem('todo'));
 for (let i in todoList1) {
-console.log(todoList1[i].todo);
-console.log(todoList1[i].class);
+// console.log(todoList1[i].todo);
+//console.log(todoList1[i].class);
 // Создаём новую задачу - элемент li
 let newTask = document.createElement('li');			  
 // Берём текст задачи из поля todo
@@ -72,4 +72,22 @@ list.append(newTask);
 // Очищаем поле ввода input
 input.value = '';
 };
+};
+
+todoclear = function () {
+    localStorage.clear();
+	location.reload();
+};
+
+todolist = function (evt) {
+		localStorage.setItem('todo', JSON.stringify(todoList1));
+		var target = event.target.innerHTML;
+		// alert('Удалить задачу?');
+		for (let i in todoList1) {
+		if (todoList1[i].todo = target) {
+			todoList1.splice([i], 1);
+			}
+		}
+		// event.target.remove();
+	
 };

@@ -12,8 +12,11 @@
 		      <label class="input-label" for="todo-input">Добавьте задачу</label>
 		      <input type="text" class="todo-input" id="todo-input" required>
 		      <button type="button" class="todo-priority is-important">Важная задача</button>
-		      <button type="submit" class="todo-add">Добавить в список</button>
+		      <div>
+			  <button type="submit" class="todo-add">Добавить в список</button>
+				<button onclick="todoclear();  return false;" class="todo-clear">Очистить  список</button>
+			  </div>
 		    </form>
-			<ul class="todo-list"></ul>
+			<ul onclick="todolist(); return false;" class="todo-list"></ul>
 	</body>
 </html>
